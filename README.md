@@ -32,7 +32,7 @@ Moreover, the project revolves around Formula 1, which is one of my favourite sp
 Notable Topics:
 * Azure Databricks Clusters, Cluster Pools and Policies
 * Storage Accounts and Authentication
-* Azure Data Lake Storage
+* Azure Data Lake Storage - Access Patterns, Secrets, Mounting to Databricks
 
 
 
