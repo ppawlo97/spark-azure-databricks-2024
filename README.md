@@ -33,6 +33,8 @@ Notable Topics:
 * Azure Databricks Clusters, Cluster Pools and Policies
 * Storage Accounts and Authentication
 * Azure Data Lake Storage - Access Patterns, Secrets, Mounting to Databricks
+* PySpark - Spark Architecture, Data Ingestion, Transformations (Filters, Joins), Aggregations (GroupBy, Window Functions)
+* Spark SQL - Temporary Views, ...
 
 
 
@@ -43,6 +45,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/ppawlo97/si-summer-2020/blob/master/LICENSE
+[license-url]: https://github.com/ppawlo97/spark-azure-databricks-2024/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://pl.linkedin.com/in/piotr-paw%C5%82owski-64390917a
