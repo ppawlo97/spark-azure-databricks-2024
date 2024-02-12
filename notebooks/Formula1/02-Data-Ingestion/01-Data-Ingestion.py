@@ -240,46 +240,62 @@ quali_sdf_final = (
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC Save processing results to `processed` container
+# MAGIC Save results
 
 # COMMAND ----------
 
-circuits_sdf_final.write.parquet(
-    get_path_to_file(STORAGE_ACCOUNT_NAME, OUTPUT_CONTAINER, "circuits"), 
-    mode="overwrite"
+# MAGIC %sql
+# MAGIC CREATE DATABASE IF NOT EXISTS f1_processed
+# MAGIC LOCATION "/mnt/formula1dlpp/processed";
+
+# COMMAND ----------
+
+db_name = "f1_processed"
+
+circuits_sdf_final.write.saveAsTable(
+    f"{db_name}.circuits", 
+    mode="overwrite",
+    format="parquet"
 )
 
-race_sdf_final.write.parquet(
-    get_path_to_file(STORAGE_ACCOUNT_NAME, OUTPUT_CONTAINER, "races"), 
-    mode="overwrite"
+race_sdf_final.write.saveAsTable(
+    f"{db_name}.races", 
+    mode="overwrite",
+    format="parquet"
 )
 
-constructors_sdf_selected.write.parquet(
-    get_path_to_file(STORAGE_ACCOUNT_NAME, OUTPUT_CONTAINER, "constructors"), 
-    mode="overwrite"
+constructors_sdf_selected.write.saveAsTable(
+    f"{db_name}.constructors", 
+    mode="overwrite",
+    format="parquet"
 )
 
-drivers_sdf_selected.write.parquet(
-    get_path_to_file(STORAGE_ACCOUNT_NAME, OUTPUT_CONTAINER, "drivers"), 
-    mode="overwrite"
+drivers_sdf_selected.write.saveAsTable(
+    f"{db_name}.drivers", 
+    mode="overwrite",
+    format="parquet"
 )
 
-results_sdf_final.write.parquet(
-    get_path_to_file(STORAGE_ACCOUNT_NAME, OUTPUT_CONTAINER, "results"), 
-    mode="overwrite"
+results_sdf_final.write.saveAsTable(
+    f"{db_name}.results", 
+    mode="overwrite",
+    format="parquet"
 )
 
-pit_stops_sdf_final.write.parquet(
-    get_path_to_file(STORAGE_ACCOUNT_NAME, OUTPUT_CONTAINER, "pit_stops"), 
-    mode="overwrite"
+pit_stops_sdf_final.write.saveAsTable(
+    f"{db_name}.pit_stops", 
+    mode="overwrite",
+    format="parquet"
 )
 
-lap_times_sdf_final.write.parquet(
-    get_path_to_file(STORAGE_ACCOUNT_NAME, OUTPUT_CONTAINER, "lap_times"), 
-    mode="overwrite"
+lap_times_sdf_final.write.saveAsTable(
+    f"{db_name}.lap_times", 
+    mode="overwrite",
+    format="parquet"
 )
 
-quali_sdf_final.write.parquet(
-    get_path_to_file(STORAGE_ACCOUNT_NAME, OUTPUT_CONTAINER, "qualifying"), 
-    mode="overwrite"
+quali_sdf_final.write.saveAsTable(
+    f"{db_name}.qualifying", 
+    mode="overwrite",
+    format="parquet"
 )

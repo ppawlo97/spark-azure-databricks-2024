@@ -71,7 +71,7 @@ final_results_sdf = (
             results_sdf.constructor_id == constructors_sdf.constructor_id,
             "left"
         )
-        .select(drivers_sdf.driver_name, drivers_sdf.driver_nationality, drivers_sdf.driver_number, constructors_sdf.team, results_sdf.race_id, results_sdf.grid, results_sdf.fastest_lap, results_sdf.points, results_sdf.race_time)
+        .select(drivers_sdf.driver_name, drivers_sdf.driver_nationality, drivers_sdf.driver_number, constructors_sdf.team, results_sdf.race_id, results_sdf.grid, results_sdf.fastest_lap, results_sdf.points, results_sdf.race_time, results_sdf.position)
 )
 
 # Final Join
@@ -111,7 +111,17 @@ display(
 
 # COMMAND ----------
 
-final_sdf.write.parquet(
-    get_path_to_file(STORAGE_ACCOUNT_NAME, OUTPUT_CONTAINER, "race_results"), 
-    mode="overwrite"
+# MAGIC %sql
+# MAGIC CREATE DATABASE IF NOT EXISTS f1_presentation
+# MAGIC LOCATION "/mnt/formula1dlpp/presentation";
+
+# COMMAND ----------
+
+db_name = "f1_presentation"
+
+final_sdf.write.saveAsTable(
+    f"{db_name}.race_results", 
+    mode="overwrite",
+    format="parquet"
 )
+
