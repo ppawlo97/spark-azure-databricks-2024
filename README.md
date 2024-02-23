@@ -34,7 +34,10 @@ Notable Topics:
 * Storage Accounts and Authentication
 * Azure Data Lake Storage - Access Patterns, Secrets, Mounting to Databricks
 * PySpark - Spark Architecture, Data Ingestion, Transformations (Filters, Joins), Aggregations (GroupBy, Window Functions)
-* Spark SQL - Temporary Views, ...
+* Spark SQL - Temporary Views, Databases, Tables, SQL flavour of all PySpark features
+* Incremental Loads
+* Delta Lake - Architecture, History, Time Travel, Vacuum, Merge/Upsert
+* Azure Data Factory - ...
 
 
 
