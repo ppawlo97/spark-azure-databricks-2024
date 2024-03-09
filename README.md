@@ -37,7 +37,7 @@ Notable Topics:
 * Spark SQL - Temporary Views, Databases, Tables, SQL flavour of all PySpark features
 * Incremental Loads
 * Delta Lake - Architecture, History, Time Travel, Vacuum, Merge/Upsert
-* Azure Data Factory - ...
+* Azure Data Factory - Debugging Pipelines, Linked Services, Triggers
 
 
 
