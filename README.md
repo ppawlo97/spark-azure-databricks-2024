@@ -8,7 +8,7 @@
   <h3 align="center">Azure Databricks & Spark For Data Engineers Course</h3>
 
   <p align="center">
-    Below find the information on...
+    Below find the information on contents of this repository
     <br />
     <br />
   </p>
