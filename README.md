@@ -29,7 +29,7 @@ This project contains all notebooks, code and analysis I've done during the [Azu
 *To everyone reading this*, I highly recommend taking this course, because it provides an extensive view on Azure, Databricks, PySpark, SQL and Data Analysis in general. It's also great to use as a refresher before Azure or Databricks Certifications.
 Moreover, the project revolves around Formula 1, which is one of my favourite sports (Go Max!).
 
-Notable Topics:
+#### Notable Topics:
 * Azure Databricks Clusters, Cluster Pools and Policies
 * Storage Accounts and Authentication
 * Azure Data Lake Storage - Access Patterns, Secrets, Mounting to Databricks
@@ -39,7 +39,8 @@ Notable Topics:
 * Delta Lake - Architecture, History, Time Travel, Vacuum, Merge/Upsert
 * Azure Data Factory - Debugging Pipelines, Linked Services, Triggers
 
-
+#### Note
+All notebooks are Azure Databricks Notebooks presented as Python files. Consequently, they contain syntactic parts, such as "COMMAND" or "MAGIC" comments. 
 
 ## License
 
